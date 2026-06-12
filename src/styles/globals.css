@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-brand-amber text-white font-bold
+           px-7 py-3 rounded-full transition-all
+           hover:bg-brand-amber-dark;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 border-2 border-brand-green
+           text-brand-green px-7 py-3 rounded-full
+           hover:bg-brand-green hover:text-white;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 text-brand-green
+           px-4 py-2 rounded-full hover:bg-brand-green/10;
+  }
+
+  .progress-track {
+    @apply h-2 bg-gray-200 rounded-full overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full bg-brand-amber rounded-full transition-all duration-1000;
+  }
+}

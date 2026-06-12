@@ -1,19 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+
 import './styles/globals.css'
+
+import { Layout } from '@/components/layout/Layout'
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-brand-cream">
-      <h1 className="text-4xl font-bold text-brand-green">
-        InAmigos Foundation 🚀
-      </h1>
-    </div>
+    <Layout>
+      <div className="section-container py-20">
+        <h1 className="text-4xl">Layout Test</h1>
+      </div>
+    </Layout>
   )
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 )
